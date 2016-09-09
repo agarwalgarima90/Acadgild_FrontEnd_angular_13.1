@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 12.1</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular-route.min.js"></script>
+		<script>
+			var myapp = angular.module('acadgild', ['ngRoute']);
+
+			myapp.controller('mycontroller1', function($scope) {
+				$scope.name = ["Garima","Rishi","Razat","Kavya"];
+			});
+
+			myapp.config(function($routeProvider) {
+				$routeProvider.otherwise({
+					templateUrl: 'test.html'
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div ng-view>
+		</div>
+	</body>
+</html>
